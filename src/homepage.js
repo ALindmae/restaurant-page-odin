@@ -3,20 +3,21 @@ import ambienceImg from "./ambience-restaurant.jpg";
 export function renderHomepage () {
 
     const content = document.querySelector('#content');
+    content.textContent = "";
 
     // --- HERO SECTION ---
     const heroSection = document.createElement('section');
     heroSection.classList.add('hero');
 
-    const heroText = document.createElement('h1');
-    heroText.classList.add('hero__text');
-    heroText.textContent = "Culinary Cult Trip";
+    const heroTitle = document.createElement('h1');
+    heroTitle.classList.add('hero__title');
+    heroTitle.textContent = "Culinary Cult Trip";
 
     const heroBtn = document.createElement('button');
-    heroBtn.classList.add('button', 'hero__button');
+    heroBtn.classList.add('btn', 'btn-primary');
     heroBtn.textContent = "Make reservation";
 
-    heroSection.appendChild(heroText);
+    heroSection.appendChild(heroTitle);
     heroSection.appendChild(heroBtn);
 
     content.appendChild(heroSection);
@@ -56,7 +57,7 @@ export function renderHomepage () {
     const ambienceTextContainer = document.createElement('div');
     ambienceTextContainer.classList.add('ambience__text-container');
 
-    const ambienceTitle = document.createElement('p');
+    const ambienceTitle = document.createElement('h2');
     ambienceTitle.classList.add('ambience__title');
     ambienceTitle.textContent = "An Atmosphere of Subtle Opulence";
 
