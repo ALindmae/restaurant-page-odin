@@ -15,7 +15,7 @@ export function renderHomepage () {
     const heroBtn = document.createElement('button');
     heroBtn.classList.add('btn', 'btn--primary');
     heroBtn.dataset.page = "contact";
-    heroBtn.textContent = "Make reservation";
+    heroBtn.textContent = "Make Reservation";
 
     heroSection.appendChild(heroTitle);
     heroSection.appendChild(heroBtn);

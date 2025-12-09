@@ -22,8 +22,9 @@ export function renderAboutPage() {
     location.textContent = "Brass & bass 127-40, SA. Nestled at the border of the Old Quarter and the Sapphire District"
 
     const contactBtn = document.createElement('button');
-    contactBtn.classList.add('btn', 'btn-primary');
-    contactBtn.textContent = "Book a Table";
+    contactBtn.classList.add('btn', 'btn--primary');
+    contactBtn.dataset.page = 'contact';
+    contactBtn.textContent = "Make Reservation";
 
     aboutUs.append(aboutUsTitle, aboutUsBody, location, contactBtn);
 
@@ -35,6 +36,9 @@ export function renderAboutPage() {
     restaurantImg.src = mainImg;
     restaurantImg.classList.add('about-restaurant__image');
 
+    const overlay = document.createElement('div');
+    overlay.classList.add('about-restaurant__overlay');
+
     const textBox = document.createElement('div');
     textBox.classList.add('about-restaurant__text-box');
 
@@ -44,7 +48,7 @@ export function renderAboutPage() {
 
     textBox.append(textBoxDescription);
     
-    aboutRestaurant.append(restaurantImg, textBox);
+    aboutRestaurant.append(restaurantImg, overlay, textBox);
 
     content.append(aboutUs, aboutRestaurant);
 }

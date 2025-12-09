@@ -7,13 +7,19 @@ export function renderContactPage() {
     // --- HERO SECTION ---
     const hero = document.createElement('div');
     hero.classList.add('contact-hero');
+
     const heroImg = document.createElement('img');
     heroImg.src = heroImgSrc;
     heroImg.classList.add('contact-hero__image')
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('contact-hero__overlay');
+
     const heroText = document.createElement('p');
     heroText.classList.add('contact-hero__text')
     heroText.textContent = "Contact";
-    hero.append(heroImg, heroText);
+
+    hero.append(heroImg, overlay, heroText);
 
     // --- CONTACT SECTION ---
     const details = document.createElement('div');
@@ -21,10 +27,10 @@ export function renderContactPage() {
 
     // --- Address ---
     const address = document.createElement('div');
-    address.classList.add('contact-details__address');
+    address.classList.add('contact-details__container');
 
     const addressTitle = document.createElement('h2');
-    addressTitle.classList.add('contact-details__address-title');
+    addressTitle.classList.add('contact-details__title');
     addressTitle.textContent = "Address:";
 
     const addressInfo = document.createElement('p');
@@ -35,10 +41,10 @@ export function renderContactPage() {
 
     // --- Contact---
     const contact = document.createElement('div');
-    contact.classList.add('contact-details__contact');
+    contact.classList.add('contact-details__container');
 
     const contactTitle = document.createElement('h2');
-    contactTitle.classList.add('contact-details__contact-title');
+    contactTitle.classList.add('contact-details__title');
     contactTitle.textContent = "Contact:";
 
     const number = document.createElement('p');
@@ -54,7 +60,7 @@ export function renderContactPage() {
     details.append(address, contact);
     
 
-    content.append(details);
+    content.append(hero, details);
 }
 
 

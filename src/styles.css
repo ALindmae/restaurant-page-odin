@@ -1,7 +1,270 @@
+/* CSS RESET */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+
+
+/*--- GENERAL CSS ---*/
+
+.btn--primary {
+    padding: 0.8rem 1.7rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Header */
+
+header {
+    position:sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 3rem;
+    background-color: white;
+}
+
+.logo {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navigation__link {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 0.8rem;
+
+    font-size: 1.1rem;
+}
+
+
+
+/*--- HOMEPAGE.JS ---*/
+
+/* Hero section */
+
 .hero {
-    background-image: url("./hero-image.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    background-image: 
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+            url("./hero-image.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh;
+    color: white;
 }
+
+.hero__title {
+    font-size: 2.5rem;
+}
+
+
+/* About us section */
+
+.about-us {
+    padding: 7rem 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.about-us__description {
+    max-width: 70ch;
+}
+
+
+/* Ambience section */
+
+.ambience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ambience__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    gap: 1rem;
+
+}
+
+.ambience__description {
+    max-width: 70ch;
+}
+
+.ambience__photo {
+    justify-self: end;
+    margin: 3rem;
+    width: 25vw;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+
+/*--- MENU.JS ---*/
+
+.menu {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+
+.menu__subtitle {
+    padding: 1rem;
+}
+
+.menu__item {
+    padding: 0.5rem;
+
+}
+
+.menu__item-description {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.2rem;
+
+}
+
+
+/*--- ABOUT.JS ---*/
+
+.about-restaurant {
+    position: relative;
+}
+
+.about-restaurant__image {
+    height: 30vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.about-restaurant__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(86, 86, 86, 0.5);
+}
+
+.about-restaurant__text-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 33%;
+    background-color: black;
+    color: white;
+    padding: 3rem;
+}
+
+.about-restaurant__description {
+    max-width: 70ch;
+}
+
+
+/*--- CONTACT.JS ---*/
+
+.contact-hero {
+    position: relative;
+}
+
+.contact-hero__image {
+    height: 20vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.contact-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.contact-hero__text {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+}
+
+.contact-details {
+    padding: 4rem 10rem;
+}
+
+.contact-details__container {
+    margin: 1rem 0;
+}
+
+.contact-details__title {
+    padding: 0.5rem 0;
+}
+
+
 
