@@ -85,7 +85,6 @@ function createMenuSection(category) {
 
 export function renderMenuPage() {
     const content = document.querySelector('#content');
-    content.innerHTML = "";
 
     const container = document.createElement('div');
     container.classList.add('menu');

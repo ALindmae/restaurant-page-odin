@@ -6,20 +6,33 @@ import { renderContactPage } from "./contact.js";
 
 renderHomepage();
 
+const content = document.querySelector('#content');
 const navigation = document.querySelector('.navigation');
 
 navigation.addEventListener('click', e => {
-    switch (e.target.textContent) {
-        case "Home":
+    const button = e.closest('[data-page]');
+    if (!button) return;
+    
+    const page = button.dataset.page;
+
+    switch (page) {
+        case "home":
+            content.textContent = "";
             renderHomepage()
             break;
-        case "Menu":
+
+        case "menu":
+            content.textContent = "";
             renderMenuPage();
             break;
-        case "About":
+
+        case "about":
+            content.textContent = "";
             renderAboutPage();
             break;
-        case "Contact":
+
+        case "contact":
+            content.textContent = "";
             renderContactPage();
             break;
     }

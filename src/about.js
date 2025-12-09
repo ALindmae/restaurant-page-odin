@@ -3,7 +3,6 @@ import ambienceImg from "./ambience-restaurant.jpg";
 
 export function renderAboutPage() {
     const content = document.querySelector('#content');
-    content.textContent = "";
 
     // --- ABOUT US SECTION ---
     const aboutUs = document.createElement('section');
