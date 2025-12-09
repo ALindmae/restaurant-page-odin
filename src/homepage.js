@@ -13,7 +13,8 @@ export function renderHomepage () {
     heroTitle.textContent = "Culinary Cult Trip";
 
     const heroBtn = document.createElement('button');
-    heroBtn.classList.add('btn', 'btn-primary');
+    heroBtn.classList.add('btn', 'btn--primary');
+    heroBtn.dataset.page = "contact";
     heroBtn.textContent = "Make reservation";
 
     heroSection.appendChild(heroTitle);

@@ -6,11 +6,10 @@ import { renderContactPage } from "./contact.js";
 
 renderHomepage();
 
-const content = document.querySelector('#content');
-const navigation = document.querySelector('.navigation');
+const body = document.querySelector('body');
 
-navigation.addEventListener('click', e => {
-    const button = e.closest('[data-page]');
+body.addEventListener('click', e => {
+    const button = e.target.closest('[data-page]');
     if (!button) return;
     
     const page = button.dataset.page;
@@ -37,4 +36,3 @@ navigation.addEventListener('click', e => {
             break;
     }
 })
-
